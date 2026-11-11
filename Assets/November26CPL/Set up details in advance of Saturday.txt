@@ -1,0 +1,17 @@
+Step 1:
+
+Please ensure you have a Google account to access:
+- https://colab.research.google.com/
+You do not have to do anything in advance other than ensure you can get into the above link!
+
+
+Step 2:
+
+Download the CSV (in this folder named: "Student_performance_data.csv") file to your laptop in advance of Saturday!
+
+
+Step 3:
+See you all on Saturday! Safe travels.
+
+-----------
+CSinc team!
