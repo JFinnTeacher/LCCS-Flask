@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='my_styles.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>football Survey</title>
+</head>
+
+     <table border="1">
+        <tr>
+		    <td><a href="/">Football Data</a></td>
+<! -- this is a link to the  Display Data page (itself)
+			the name of the App Route in the Server python (py) file see line 36 -->     
+			
+            <td><a href="/displayGraphs">Player Data Analytics</a></td>
+			<td><a href="/take_survey">Football Survey</a></td>
+<! -- this is a link to the  Display Graphs page
+			the name of the App Route in the Server python (py) file see line 140 --> 
+			
+        </tr>
+    </table>
+<body>
+    <h1>FOOTBALL SURVEY </h1>
+
+	
+    <form method="POST" action="/take_survey" ; >
+        <label for="watch_football_matches">Do you watch football matches on TV?</label><br>
+        <select id="watch_football_matches" name="watch_football_matches" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="last_at_football_match">When did you last attend a Football Match? :</label><br>
+        <input type="date" id="last_at_football_match" name="last_at_football_match" required><br><br>
+		
+		<label for="how_often">How many times have you been to a football match in the last 20 years? :</label><br>
+        <input type="number" id="how_often" name="how_often" required><br><br>
+	
+         <label for="price">How much would your spend at football (roughly)? :</label><br>
+        <input type="number" id="price" name="price" required><br><br>      
+            
+		</select><br><br>
+        <label for="Favorite player">Favorite Player:</label><br><br>
+        <select id="favorite_player" name="favorite_player" required>
+		    <option value="Pele">Pele</option>
+            <option value="Maradona">Maradona</option>
+            <option value="Gazza ">Gascgoine</option>
+            <option value="Best">Best</option>
+            <option value="M'Beppe">M'Beppe</option>
+			<option value="Ronaldo">Ronaldo</option>
+			<option value="Messi">Messi</option>
+        </select><br><br>
+
+		
+		
+        
+
+        <button type="submit">Submit</button>
+    </form>
+	
+	<h1 style="text-align: center;">Survey Resuts</h1>
+    <table>
+        <thead>
+            <tr>
+			<th>Watch Football on TV? </th>
+				
+                <th>Last Attend Football Match</th>
+                <th> How many matches in 20 years </th>
+                <th>How much £ spent at football </th>
+				<th>Favorite Player </th>
+				
+            </tr>
+        </thead>
+        <tbody>
+            {% for current_data in For_HTML_survey_results_data %}
+            <tr>
+                
+				<td>{{ current_data['Watch'] }}</td>
+                <td>{{ current_data['Attend'] }}</td>
+				<td>{{ current_data['How Many'] }}</td>
+                <td>{{ current_data['How Much'] }}</td>
+			<td>{{ current_data['Fav Player'] }}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>  
+    
+</body>
+</html>

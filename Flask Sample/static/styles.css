@@ -6,3 +6,14 @@ h1 {
     color: brown;
     text-align: center;
 }
+
+header {
+    color: red;
+    background-color: black;
+    height: fit-content;
+}
+
+form {
+    border: 5px;
+    align-self: center;
+}

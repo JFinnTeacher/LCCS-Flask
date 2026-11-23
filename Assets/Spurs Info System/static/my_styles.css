@@ -1,0 +1,120 @@
+
+h1{
+
+color:yellow;
+background-color:blue;
+font-family: impact;
+text-align: center; 
+}
+h2
+{
+color:#33ffff;
+background-color:grey;
+font-family: Arial, sans-serif
+text-align: center;
+font-size: 12px; 
+
+}
+
+body {
+  
+  font-family: Verdana, sans-serif;
+  background-color:white;
+}
+p {
+    color: black;
+}
+ul
+{
+color: midnightblue;
+font-style: italic;}
+
+
+td 
+{
+    text-align: center; 
+    vertical-align: middle;
+}
+
+table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #1225e3 ;
+			color:#f4f4f8 ;
+        }
+label
+{
+	
+font-family: verdana;
+font-size: 18px;
+color: darkblue;
+text-align: center; }
+
+form{
+font-family: verdana;
+font-size: 18px;
+color: white;
+text-align: center; }
+
+
+}	
+	
+/* normal link */
+a {
+  color: white;
+}
+
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: purple;
+}
+
+.portrait
+{
+    transition: transform .2s;
+    width:100px;
+    height:250px;
+    margin:0 auto;
+}
+.landscape
+{
+    transition: transform .2s;
+    width:700px;
+    height:350px;
+    margin:0 auto;
+    background-color: rgb(173, 173, 237);
+    border-radius: 10px;
+	border: 1px solid black;
+	
+	
+	}
+	
+
+
+
+	
+
+
+
+
+
+
+
+

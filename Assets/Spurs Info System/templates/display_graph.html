@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='my_styles.css') }}">
+<head>
+   
+    <title>Harry Kane: Tottenham Hotspur Stats </title>
+</head>
+<body>
+<header>
+<center>
+    <table border="1">
+        <tr>
+		    <td><a href="/">Football Data</a></td>
+<! -- this is a link to the  Display Data page (itself)
+			the name of the App Route in the Server python (py) file see line 36 -->     
+			
+            <td><a href="/displayGraphs">Player Data Analytics</a></td>
+			<td><a href="/take_survey">Football Survey</a></td>
+<! -- this is a link to the  Display Graphs page
+			the name of the App Route in the Server python (py) file see line 140 --> 
+			
+        </tr>
+    </table>
+<center>   
+</header>
+<h1>Harry Kane's Tottenham Hotspur Career Stats </h1>
+<br>
+<hr>
+<p>We split <b>Kanes's </b> performances for Tottenham </p><br>
+<p>The total Games he played for Spurs was : {{ HTML_Total_Kane_Games }} </p>
+<p>The total Goals he scored in that time was :   {{ HTML_Total_Kane_Goals }} </p>
+<center>
+<br><br>
+<p>Based on the above his career average goals was : {{ HTML_Kane_Career_Avg }} </p><br>
+<p>The yearly averages of his seasons at Spurs were  :   {{ HTML_Kane_yearly_averages }} </p>
+
+<br><br><br><br>
+<image src="static/total_kane_averages.png" alt="Graph of Total steps" class="landscape">
+</center>
+</body>
+</html>

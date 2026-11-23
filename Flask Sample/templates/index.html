@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Append to CSV</title>
@@ -11,7 +11,10 @@
 </head>
 
 <body>
-    <h1>Append Data to CSV</h1>
+    <header>
+        <h1>Append Data to CSV</h1>
+    </header>
+
     <form id="dataForm">
         <label for="data1">Data 1:</label>
         <input type="text" id="data1" name="data1" required>

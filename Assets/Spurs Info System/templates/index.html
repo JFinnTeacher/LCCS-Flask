@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='my_styles.css') }}">
+
+<! -- the above points to the CSS file in the static folder  --> 
+<head>
+    <meta charset="UTF-8">
+    <title>Tottenham Hotspur  Information System</title>
+</head>
+<body>
+<header>
+<center>
+<img src="static/Logo.jpg" alt="Spurs Logo" class="portrait"></td>
+<center>
+<center>
+    <table border="1">
+        <tr>
+		    <td><a href="/">Football Data</a></td>
+<! -- this is a link to the  Display Data page (itself)
+			the name of the App Route in the Server python (py) file see line 36 -->     
+			
+            <td><a href="/displayGraphs">Player Data Analytics</a></td>
+			<td><a href="/take_survey">Football Survey</a></td>
+<! -- this is a link to the  Display Graphs page
+			the name of the App Route in the Server python (py) file see line 140 --> 
+		
+        </tr>
+    </table>
+
+    <h1 style="text-align: center;">Past Players Data Set</h1>
+    <table>
+    <thead>
+        <tr>
+            <th>Player Name</th>
+            <th>Year </th>
+            <th>Appearances</th>
+            <th>Goals Scored</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for current_player in Spurs_data_For_My_Web_Page %}
+            <tr>
+                <td>{{ current_player['Player'] }}</td>
+                <td>{{ current_player['Year'] }}</td>
+                <td>{{ current_player['Apps'] }}</td>
+                <td>{{ current_player['Goals'] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+	
+	<br>
+	<br>
+	<br>
+	
+	</center>
+</body>
+</html>
